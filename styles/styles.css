@@ -1,4 +1,19 @@
+:root{
+    --black: #2F2F2F;
+    --eggshell: #F9F7F6;
+    --darkGreen: #618877;
+    --lightGreen: #D7E1DC;
+    --red:#F25627;
+    --border-radius: 5px;
+    --box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.1);
+
+}
+html{
+  font-family: eskorte-latin, serif;
+}
+
 body{
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
@@ -8,7 +23,7 @@ body{
     "footer";
     margin: 0 auto;
     width: 100%;
-    background-color: #F9F7F6;
+    background-color: var(--eggshell);
 }
 
 header {
@@ -17,10 +32,193 @@ header {
     grid-template-columns: 1fr auto 1fr;
     grid-template-areas:
     "nav logo search";
+    width: 100%;
+    height: 200px;
     margin: 0 auto;
-    padding: 5px;
+    padding: 10px 20px;
     background-color: #fff;
-    box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+    color: var(--black);
+  
+}
+main {
+    grid-area: main;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+}
+footer{
+    grid-area: footer;
+    height: 150px;
+}
 
+#leftColumn, #rightColumn {
+    width: 100%;
+}
+/*FONT STYLES*/
+h1{
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h3{
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--red);
+    font-size: 1rem;
+}
+h4{
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+p{
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+/*HEADER STYLES*/
+
+#logo{
+    grid-area: logo;
+    justify-self: center;
+    align-self: end;
+}
+#logo a{
+    color: var(--black);
+    text-decoration: none;
+}
+    
+#dropMenu{
+    grid-area: nav;
+    justify-self: start;
+}
+
+.menuShow{
+    display: flex;
+    flex-direction: column;
+   
+}
+.menuHide{
+    display: none;
+}
+
+#nav {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: var(--black);
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+#nav a{
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--eggshell);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#nav a:hover{
+    font-weight: 600;
+}
+#navAbout{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.btn-top{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
     
 }
+.btn-top:hover{
+    font-size: 2.2rem;
+}
+
+#menuClose #searchClose{
+    width: 100%;
+    padding: 10px;
+}
+
+.menu-close .btn-top{
+    float: left;
+    color: var(--lightGreen);
+}
+
+/*search*/
+#searchDrop{
+    grid-area: search;
+    justify-self: end;
+}
+#searchBox{
+    width: 100vw;
+    position: absolute;
+    left:0;
+    top: 0;
+    background-color: var(--black);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    height: 10vh;
+}
+#searchInput{
+    justify-self: center;
+    margin: auto;
+    width: 100%;
+    height: 30px;
+}
+.searchHide{
+    display: none;
+}
+
+.searchShow{
+    display: flex;
+    flex-direction:column;
+    
+}
+.search-close .btn-top{
+    float: right;
+    color: var(--lightGreen);
+}
+
+.search{
+    width: 75%;
+    height: 100%;
+    margin: 0;
+    padding-left: 10px;
+}
+.searchInput{
+    width: auto;
+    height: 100%;
+    margin: 0;
+    background-color: var(--lightGreen);
+    border: none;
+    cursor: pointer;
+
+}
+
+
+
