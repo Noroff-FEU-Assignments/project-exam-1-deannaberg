@@ -1,5 +1,5 @@
 //DROPDOWN MENU
-const nav = document.querySelector("#nav");
+const nav = document.querySelector("nav");
 
 document.querySelector (".closeButton").addEventListener("click", closeMenu);
 document.querySelector ("#dropMenu").addEventListener("click", showMenu);

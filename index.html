@@ -18,32 +18,35 @@
 	</head>
 	<body>
 		<header>
+		<div id="top-menu-background"></div>
+		<div id="menu-background"></div>
+		<div id="header-wrap">
         <div id="small-nav"></div>
         <div id="logo">
 		<a href="index.html">
-        <img src="" alt="" />
+        <img src="" alt="logo image" />
         <h1>The Arctic Berg</h1>
 		</a>
         </div>
-		<div id="dropMenu">
+			<div id="dropMenu">
 			<button class="btn-top"><i class="fas fa-bars"></i></button>
-		</div>
-		<nav id="nav" class="menuHide">
-			<div class="menu-close">
-				<button id="" class="closeButton btn-top btn-close"><i class="fas fa-times"></i></button>
 			</div>
-			<a href="#">culture</a>
-			<a href="#">food</a>
-			<a href="#">travel</a>
-			<a href="#">outdoor life</a>
-			<a href="#">everyday life</a>
-			<a href="#">holidays</a>
-			<div id="navAbout">
-			<a href="#">about</a>
-			<a href="#">contact</a>
-			</div>
-		</nav>
-		</div>
+			<nav id="nav" class="menuHide">
+				<div class="menu-close">
+					<button id="" class="closeButton btn-top btn-close"><i class="fas fa-times"></i></button>
+				</div>
+				<a class="active" href="#">culture</a>
+				<a class="" href="#">food</a>
+				<a class="" href="#">travel</a>
+				<a class="" href="#">outdoor life</a>
+				<a class="" href="#">everyday life</a>
+				<a class="" href="#">holidays</a>
+				<div id="navAbout">
+					<a href="#">about</a>
+					<a href="#">contact</a>
+				</div>
+			</nav>
+		
 		<div id="searchDrop">
 			<button class="btn-top"><i class="fas fa-search"></i></button>
 		</div>
@@ -56,20 +59,62 @@
 				<input class="searchInput" type="submit" value="go"/>
 			</form>
 		</div>
-        
+	
+	</div>
+</div>
 		</header>
 
 		<!--Main Section-->
 		<main>
-			<div id="leftColumn">
-			<h4>This is a sub heading</h4>
-			<h3>This is a post category</h3>
-			<h2>This Is a Post Heading</h2>
-			<p>This is a paragraph!</p>
-			</div>
-			<div id="rightColumn">
+			<section id="topSection">
+			<div id="recentPostCarosel" class="postCarosel">
+				<h4 class="caroselHeading">recent posts</h4>
+				<div class="caroselContentWrap">
+					<div class="caroselItem">
+						<img class="caroselImg" src="" alt=""/>
+						<div class="caroselContent">
+							<h3>Post category</h3>
+							<h2>Post Title</h2>
+							<a href="#">read more <i class="fas fa-arrow-alt-circle-right"></i> </a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="leftColumn">
+				<div class="post">
+					<img class="featureImage" src="images/arctic_berg_nesseby_kirke.jpg" alt="" />
+					<div class="postContentWrap">
+						<h2 class="postTitle">Nesseby Kirke</h2>
+						<h3 class="postAuthor">deanna berg</h3>
+						<div class="postText">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+						</div>
+						<section class="postFooter">
+							<span class="postCategory">travel</span>
+							<span class="postDate">March 18, 2021</span>
+						</section>
+						<a class="readMore" href="#">Read More  <i class="fas fa-long-arrow-alt-right"></i></a>
+					</div>
+				<section class="postComments"></section>
+				</div>
+			
+			</section>
+			<section id="rightColumn">
+				<div class="sideBox whiteBox">
+					<img class="aboutImage" src="images/king_eider.jpg" alt="profile image" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<div><a href="#" >about</a> <a href="#" >contact</a></div>
+				</div>
+				<div id="subscribe" class="sideBox backgroundShape">
+					<h4>Never Miss a Post</h4>
+					<p>Join my mailing list and get</br>posts directly in your inbox!</p>
+					<form class="sideSubscribe">
+						<input class="email" type="text" name="email" value="your email"/>
+						<input class="submitButton" type="submit" name="subscribe" value="subscribe" />
+					</form>
+				</div>
 
-			</div>
+			</section>
 		</main>
 		<footer>
 			footer content here
