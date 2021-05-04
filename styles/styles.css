@@ -1,9 +1,9 @@
 :root{
     --black: #2F2F2F;
     --eggshell: #F9F7F6;
-    --darkGreen: #618877;
+    --darkGreen: #456E71;
     --lightGreen: #D7E1DC;
-    --red:#F25627;
+    --red:#CB441B;
     --border-radius: 5px;
     --box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.1);
     --dotted-border: 4px dotted;
@@ -32,7 +32,7 @@ body{
     
 }
 
-header {
+#header {
     grid-area: header;
     margin: 0 auto 40px auto;
     background-color: #fff;
@@ -98,9 +98,13 @@ main {
     "rcolumn";
 
 }
-footer{
+#footer{
     grid-area: footer;
     height: 150px;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px auto 10px auto;
+    box-sizing: border-box;
 }
 
 #leftColumn, #rightColumn {
@@ -271,6 +275,7 @@ nav a:hover{
     grid-area: search;
     justify-self: end;
     position: relative;
+    
 }
 #searchBox{
     width: 100vw;
@@ -323,76 +328,55 @@ nav a:hover{
 
 }
 /*LEFT SIDEBAR*/
+
 .post h3{
     font-weight: 400;
-    color: var(--black);
-    margin-bottom: 20px;
-    margin-top: 5px;
+    color: var(--darkGreen);
+    display: inline-block;
+    font-size: .8rem;
+    letter-spacing: .06rem;
+}
+.vline::after{
+    content:'|';
+    margin: 0 2px;
 }
 .post h4 {
-    font-size: 1rem;
+    font-size: .8rem;
     color: var(--darkGreen); 
     width: 100%;
+    font-weight: 400;
+    letter-spacing: .08rem;
 }
 
-.post h4::after{
-    content:'';
-    border-top: var(--dotted-border) var(--lightGreen);
-    height: 50%;
-    margin-left:10px;
-    width: 100%;
-    position: relative;
-    
-}
 .featureImage{
     width: 100%; 
     max-width: 780px;
     height: 300px;
     object-position: center;
     object-fit:cover;
-    padding: 20px;
     box-sizing: border-box;
-    background-color: #fff;
-    box-shadow: var(--box-shadow);
 
 }
-.postContentWrap{
-    padding: 20px;
-}
+
  .postText{
      margin: 0 0 30px 0;
  }
  .postFooter{
      /*border-top: 2px solid var(--darkGreen);*/
-     border-bottom:  1px solid var(--darkGreen);
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+     border-top:  1px solid var(--darkGreen);
      font-family: var(--sans);
-     text-transform: uppercase;
-     font-weight: 400;
-     color: var(--black);
      margin-bottom: 10px;
      padding: 0 5px;
  }
  .readMore{
      text-decoration: none;
      color: var(--red);
-     font-weight: 400;
+     font-weight: 600;
      font-size: 1.2rem;
+     text-transform: uppercase;
      
  }
  
- .shareIcons{
-     font-size: 1.6rem;
-     color: var(--red);
-     text-align: center;
-    
- }
- .shareIcons .fas, .shareIcons .fab{
-     margin-left: 10px;
- }
-
 /*RIGHT SIDEBAR*/
 .whiteBox{
     background-color: #fff;
@@ -460,12 +444,14 @@ nav a:hover{
 }
 
 .sideSubscribe .email{
-    padding: 10px 15px;
+    padding: 12px 20px;
+    height: 60px;
     box-sizing: border-box;
     font-size: 1rem;
     color: var(--lightGreen);
     box-shadow: var(--box-shadow);
 }
+
 .sideSubscribe .submitButton{
     width: 40%;
     margin:20px auto;
@@ -478,6 +464,7 @@ nav a:hover{
     font-weight: 600;
     letter-spacing: .08rem;
     padding: 10px 0;
+    border: 0 none;
     
 }
 

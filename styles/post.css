@@ -1,0 +1,30 @@
+
+.shareComments{
+    display: flex;
+    justify-content: space-between;
+    color: var(--darkGreen);
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--darkGreen);
+    padding: 10px 0;
+}
+.shareComments .fas, .shareComments .fab{
+    margin-right: 10px;
+    cursor: pointer;
+   
+} 
+.shareComments .fas:hover, .shareComments .fab:hover{
+    color:var(--black);
+}
+
+#beforeAfter{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+#beforeAfter a{
+    color: var(--red);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}

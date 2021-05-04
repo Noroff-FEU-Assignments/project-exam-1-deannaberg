@@ -17,7 +17,7 @@
 			src="https://kit.fontawesome.com/a8fae1eb2c.js"crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<header>
+		<header id="header">
 		<div id="top-menu-background"></div>
 		<div id="menu-background"></div>
 		<div id="header-wrap">
@@ -48,7 +48,7 @@
 				</div>
 			</nav>
 		
-		<div id="searchDrop">
+		<div id="searchDrop" tabindex="0">
 			<button class="btn-top"><i class="fas fa-search"></i></button>
 		</div>
 		<div id="searchBox" class="searchHide">
@@ -82,23 +82,25 @@
 				</div>
 			</section>
 			<section id="leftColumn">
-				<div class="post">
-					<img class="featureImage" src="images/arctic_berg_nesseby_kirke.jpg" alt="" />
-					<div class="postContentWrap">
+				<article class="post">
+					<header>
+						<img class="featureImage" src="images/arctic_berg_nesseby_kirke.jpg" alt="" />
 						<h2 class="postTitle">Nesseby Kirke</h2>
+						<h3 class="postAuthor vline">Deanna Berg</h3>
+						<h3 class="postDate vline">March 18, 2021</h3>
 						<h3 class="postCategory">travel</h3>
-						<div class="postText">
+					</header>
+						<section class="postText">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
-						</div>
-						<section class="postFooter">
-							<span class="postAuthor">Deanna Berg</span>
-							<span class="postDate">March 18, 2021</span>
 						</section>
-						<a class="readMore" href="#">Read More  <i class="fas fa-long-arrow-alt-right"></i></a>
-					</div>
+						<footer class="postFooter">
+							<a class="readMore" href="post.html">Read More</a>
+						</footer>
+						
 				<section class="postComments"></section>
-				</div>
+				</article>
 			
+
 			</section>
 			<section id="rightColumn">
 				<div class="sideBox whiteBox">
@@ -114,11 +116,10 @@
 						<input class="submitButton" type="submit" name="subscribe" value="subscribe" />
 					</form>
 				</div>
-
 			</section>
 		</main>
-		<footer>
-			footer content here
+		<footer id="footer">
+			&copy Deanna Berg, 2021
 		</footer>
 		<script src="js/header.js"></script>
 	</body>
