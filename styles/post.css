@@ -1,4 +1,15 @@
-
+.postTags{
+    margin-bottom: 5px;
+}
+.postTags a{
+    color: inherit;
+    font-style: italic;
+    text-decoration: none;
+    margin-right: 3px;
+}
+.postTags a::after{
+    content:','
+}
 .shareComments{
     display: flex;
     justify-content: space-between;
@@ -27,4 +38,13 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+#beforeAfter a:hover{
+    text-decoration: underline;
+}
+
+#postComments{
+    background-color: #fff;
+    padding: 10px;
 }
