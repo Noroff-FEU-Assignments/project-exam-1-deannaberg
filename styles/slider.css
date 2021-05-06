@@ -1,0 +1,127 @@
+/*CAROSEL*/
+.headingDottedLine{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+
+}
+
+.headingDottedLine::before, .headingDottedLine::after{
+    content:'';
+    flex: 1 1 auto;
+    border-bottom: var(--dotted-border) var(--darkGreen); 
+}
+.headingDottedLine::before{
+    margin-right: 10px;
+}
+.headingDottedLine::after{
+    margin-left: 10px;
+}
+.headingDottedLine h2{
+    flex: 0 1 auto;
+    
+}
+.postCarosel{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px 0px;
+    position:relative;
+    z-index: 4000;
+    overflow-x: hidden;
+}
+.postCarosel::after, .postCarosel::before{
+    content:'';
+    position: absolute;
+    top:0;
+    z-index: 5000;
+    height: 100%;
+}
+.postCarosel::after{
+    border-right: solid 20px #fff;
+    right:0;
+}
+.postCarosel::before{
+    border-left: solid 20px #fff;
+    left:0;
+}
+.postCarosel a{
+    margin: 0 20px 0 0;
+    text-decoration: none;
+}
+.leftArrow, .rightArrow{
+    position: absolute;
+    top:50%;
+    z-index: 8000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 15px;
+    color: #fff;
+    text-shadow: 1px 1px 8px var(--black);
+}
+.leftArrow{
+    left: 10px;;
+}
+.rightArrow{
+    right: 10px;
+}
+#postWrapper{
+    width:auto;
+    overflow-x:hidden;
+    display: flex;
+    position: relative;
+    height: auto;
+    background-color: none;
+    z-index: 4000;
+    padding-left:20px;
+}
+.caroselItem{
+    min-width: 250px;
+    max-width: 250px;
+    height: 210px;
+    margin: 0 20px 0 0;
+    position: relative;
+    z-index: 4000;
+}
+.caroselItem:hover{
+    z-index: 4500;
+    width: 260px;
+    height: 220px;
+}
+.caroselImg{
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--lightGreen);
+    
+}
+.caroselContent{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: left;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+}
+.caroselContent h3{
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-size: .6rem;
+    width: 100%;
+    
+}
+.caroselContent h2{
+    font-size: 1rem;
+    color: var(--black);
+}

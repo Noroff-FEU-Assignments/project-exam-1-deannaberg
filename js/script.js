@@ -1,3 +1,5 @@
+
+
 //DROPDOWN MENU
 const nav = document.querySelector("nav");
 
@@ -27,5 +29,4 @@ function closeSearch(){
     search.removeAttribute ("class", "searchShow");
     search.setAttribute("class", "searchHide");
 }
-
 

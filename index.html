@@ -8,6 +8,8 @@
 
 		<!--Style Sheets-->
 		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/post.css" rel="stylesheet" />
+		<link href="styles/slider.css" rel="stylesheet" />
 
 		<!--Fonts-->
 		<link rel="stylesheet" href="https://use.typekit.net/ihl1awq.css">
@@ -68,37 +70,38 @@
 		<!--Main Section-->
 		<main>
 			<section id="topSection">
-			<div id="recentPostCarosel" class="postCarosel">
-				<h4 class="caroselHeading">recent posts</h4>
-				<div class="caroselContentWrap">
-					<figure class="caroselItem">
-						<img class="caroselImg" src="" alt=""/>
-						<figcaption class="caroselContent">
-							<h3>Post category</h3>
-							<h2>Post Title</h2>
-						</figcaption>
-					</figure>
+				<div id="recentPostCarosel" class="postCarosel">
+					<div id="postWrapper"></div>
+					<div class="leftArrow"><i class="fas fa-chevron-left"></i></div>
+					<div class="rightArrow"><i class="fas fa-chevron-right"></i></div>
+
 				</div>
 			</section>
 			<section id="leftColumn">
-				<article class="post">
-					<header>
-						<img class="featureImage" src="images/arctic_berg_nesseby_kirke.jpg" alt="" />
-						<h2 class="postTitle">Nesseby Kirke</h2>
-						<h3 class="postAuthor vline">Deanna Berg</h3>
-						<h3 class="postDate vline">March 18, 2021</h3>
-						<h3 class="postCategory">travel</h3>
-					</header>
-						<section class="postText">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+				<h2 class="headingDottedLine">recent post</h2>
+				<article id="post" class="post">
+					<header class="postHeader"></header>
+					<section class="postText"></section>
+					<footer class="postFooter">
+						<section class="shareComments">
+							<span>
+								<i class="fas fa-envelope"></i>
+								<i class="fab fa-facebook-messenger"></i>
+								<i class="fab fa-facebook"></i>
+								<i class="fab fa-twitter"></i>
+								<i class="fab fa-pinterest"></i>
+							</span>
+							<span>comments: 3</span>
 						</section>
-						<footer class="postFooter">
-							<a class="readMore" href="post.html">Read More</a>
-						</footer>
-						
-				<section class="postComments"></section>
+						<section id="beforeAfter">
+							<a href="#">read next</a>
+						</section>
+					</footer>  
 				</article>
-			
+				<section id="postComments">
+                    <h2>Comments</h2>
+                    <div id="commentContainer"></div>
+                </section>
 
 			</section>
 			<section id="rightColumn">
@@ -118,8 +121,13 @@
 			</section>
 		</main>
 		<footer id="footer">
-			&copy Deanna Berg, 2021
+			<p>All content on site has been created by Deanna Berg unless otherwise noted.</p>
+			<p>&copy Deanna Berg, 2021</p>
 		</footer>
-		<script src="js/header.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/homePage.js"></script>
+		
+		
+		
 	</body>
 </html>

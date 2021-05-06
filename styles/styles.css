@@ -6,15 +6,18 @@
     --red:#CB441B;
     --border-radius: 5px;
     --box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: 1px 1px 20px 5px rgba(0, 0, 0, 0.3);
     --dotted-border: 4px dotted;
     --active: 2px solid var(--red);
     --sans: futura-pt, sans-serif;
     --serif: eskorte-latin, serif;
-
 }
 html{
-  font-family: var(--serif);
-  color: var(--black);
+    overflow-x:auto;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+
 }
 
 body{
@@ -29,7 +32,7 @@ body{
     margin: 0 auto;
     width: 100%;
     background-color: var(--eggshell);
-    
+    overflow-y: visible;
 }
 
 #header {
@@ -37,11 +40,11 @@ body{
     margin: 0 auto 40px auto;
     background-color: #fff;
     box-shadow: var(--box-shadow);
-    box-sizing: border-box;
     color: var(--black);
     width: 100%;
     height:auto;
     position: relative;
+   
     
   
 }
@@ -77,38 +80,48 @@ body{
     z-index: 10;
     align-items: end;
     padding: 10px 20px;
-    box-sizing: border-box;
+    
     
 }
 
 main {
     grid-area: main;
     width: 100%;
+    height: auto;
     max-width: 1200px;
     padding: 10px;
     margin: auto;
-    box-sizing: border-box;
     display: grid;
-    gap: 50px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
     "top"
     "lcolumn"
     "rcolumn";
-
+    position:relative;   
+   
 }
 #footer{
     grid-area: footer;
     height: 150px;
     background-color: #fff;
     text-align: center;
-    padding: 20px auto 10px auto;
-    box-sizing: border-box;
+    padding: 20px 0 10px 0;
+    
+}
+#topSection{
+    grid-area: top;
+    overflow:hidden;
+    height: 300px;
+    padding-bottom: 40px;
+    
 }
 
 #leftColumn, #rightColumn {
     width: 100%;
+}
+#leftColumn{
+    grid-area: lcolumn;
 }
 #rightColumn h4{
     font-family: var(--serif);
@@ -117,6 +130,7 @@ main {
     text-transform: none;
     font-size: 1.6rem;
     font-weight: 400;
+    grid-area: rcolumn;
    
 }
 /*FONT STYLES*/
@@ -143,15 +157,6 @@ h3{
     color: var(--darkGreen);
     font-size: 1rem;
     letter-spacing: .08rem;
-    margin: 0;
-}
-
-h4{
-    font-family: var(--sans);
-    font-style: normal;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 1.2rem;
     margin: 0;
 }
 
@@ -217,9 +222,8 @@ nav {
     height: 100vh;
     text-align: center;
     background-color: var(--black);
-    box-sizing: border-box;
     position: absolute;
-    z-index: 30;
+    z-index: 9000;
     left: 0px;
     top: 0px;
     margin: 0;
@@ -284,7 +288,7 @@ nav a:hover{
     top: 0;
     background-color: var(--black);
     text-align: center;
-    box-sizing: border-box;
+    
     padding: 10px 20px;
     height: 20vh;
 }
@@ -329,53 +333,7 @@ nav a:hover{
 }
 /*LEFT SIDEBAR*/
 
-.post h3{
-    font-weight: 400;
-    color: var(--darkGreen);
-    display: inline-block;
-    font-size: .8rem;
-    letter-spacing: .06rem;
-}
-.vline::after{
-    content:'|';
-    margin: 0 2px;
-}
-.post h4 {
-    font-size: .8rem;
-    color: var(--darkGreen); 
-    width: 100%;
-    font-weight: 400;
-    letter-spacing: .08rem;
-}
 
-.featureImage{
-    width: 100%; 
-    max-width: 780px;
-    height: 300px;
-    object-position: center;
-    object-fit:cover;
-    box-sizing: border-box;
-
-}
-
- .postText{
-     margin: 0 0 30px 0;
- }
- .postFooter{
-     /*border-top: 2px solid var(--darkGreen);*/
-     border-top:  1px solid var(--darkGreen);
-     font-family: var(--sans);
-     margin-bottom: 10px;
-     padding: 0 5px;
- }
- .readMore{
-     text-decoration: none;
-     color: var(--red);
-     font-weight: 600;
-     font-size: 1.2rem;
-     text-transform: uppercase;
-     
- }
  
 /*RIGHT SIDEBAR*/
 .whiteBox{
@@ -446,7 +404,7 @@ nav a:hover{
 .sideSubscribe .email{
     padding: 12px 20px;
     height: 60px;
-    box-sizing: border-box;
+    
     font-size: 1rem;
     color: var(--lightGreen);
     box-shadow: var(--box-shadow);
@@ -516,7 +474,7 @@ nav a:hover{
         grid-area: nav;
         width: auto;
         height: auto;
-        box-sizing: border-box;
+        
         background-color: transparent;
         display: flex;
         position: relative;
@@ -547,118 +505,14 @@ nav a:hover{
         display: grid;
         gap: 40px 40px;
         grid-template-rows: auto auto;
-        grid-template-columns: 780px 1fr;
+        grid-template-columns: 1fr auto;
         grid-template-areas:
         "top top"
         "lcolumn rcolumn";
     }
-    #topSection{
-        grid-area: top;
-    }
-    #leftColumn{
-        grid-area: lcolumn;
-    }
-    #rightColumn{
-        grid-area: rcolumn
-    }
-    .featureImage{
-        height: 500px;
-    }
-}
+  
+  }
 
 
 
-/*CAROSEL*/
-.caroselHeading{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
 
-.caroselHeading::before, .caroselHeading::after{
-    content:'';
-    flex: 1 1 auto;
-    border-bottom: var(--dotted-border) var(--darkGreen);
-   
-}
-.caroselHeading::before{
-    margin-right: 10px;
-}
-.caroselHeading::after{
-    margin-left: 10px;
-}
-.caroselHeading h4{
-    flex: 0 1 auto;
-    
-    
-}
-
-.postCarosel{
-    width: 100%;
-    height: auto;
-    margin: auto;
-    text-align: center;
-    box-sizing: border-box;
-    position: relative;
-}
-.caroselContentWrap{
-    width: 100%;
-    height:auto;
-    background-color: #fff;
-    padding: 30px 60px;
-    box-sizing: border-box;
-    margin-top: 20px;
-}
-.caroselItem{
-    width: 200px;
-    max-width: 500px;
-    height: 210px;
-    max-height: 510px;
-    position: relative;
-   
-}
-.caroselImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-color: var(--lightGreen);
-}
-.caroselContent{
-    height: 60%;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.6);
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    text-align: center;
-}
-.caroselContent h3{
-    padding: 0;
-    margin: 0;
-    font-size: .7rem;
-    
-}
-.caroselContent h2{
-    font-size: 1rem;
-    margin: 10px;
-    padding:5px;
-    border-top: 1px solid var(--black);
-    border-bottom: 1px solid var(--black);
-
-    
-}
-
-.postCarosel a{
-    color: var(--black);
-    font-size: .9rem;
-    text-transform: capitalize;
-    text-decoration: none;
-   
-}
