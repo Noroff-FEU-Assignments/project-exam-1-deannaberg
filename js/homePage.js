@@ -1,6 +1,6 @@
 //CAROSEL
 let url = "https://deannaberg.no/wp-json/wp/v2/posts?_embed";
-let carosel = document.querySelector("#postWrapper");
+let carouselContent = document.querySelector("#carouselInner");
 
 //Fetch items from API
 async function getContent() {
@@ -19,11 +19,11 @@ async function getContent() {
 			let title = postResults[i].title.rendered;
 			console.log(featureImg, title, category);
 
-			carosel.innerHTML += `
+			carouselContent.innerHTML += `
                                         <figure id="item" class="caroselItem">
                                         <a class="caroselLink" href="#" tabindex="0">
                                             <img class="caroselImg" src="${featureImg}" alt=""/>
-                                            <figcaption class="caroselContent">
+                                            <figcaption class="carouselText">
                                                 <h3>${category}</h3>
                                                 <h2>${title}</h2>
                                             </figcaption>
@@ -36,64 +36,6 @@ async function getContent() {
 	}
 }
 getContent();
-
-	let scrollDuration = 800;
-	const rightButton = document.querySelector(".rightArrow");
-	const leftButton = document.querySelector(".leftArrow");
-	let item = document.querySelector("#item");
-	let itemLength = item.length;
-	let itemSize = item.outerWidth(true);
-
-	let buttonMargin = 20;
-
-	let getWrapperSize = function () {
-		return carosel.outerWidth();
-	};
-
-	let wrapperSize = getWrapperSize();
-
-	window.addEventListener('onresize', function(){
-		wrapperSize = getWrapperSize();
-	});
-
-	let visibleSize = wrapperSize();
-
-	let getCaroselSize = function(){
-		return itemLength * itemSize;
-	};
-
-	let caroselSize = getCaroselSize();
-
-	let invisibleSize = caroselSize - wrapperSize;
-
-	let getCaroselPosition = function(){
-		return carosel.scrollLeft ();
-	};
-
-	carosel.addEventListener('onscroll', function(){
-		invisibleSize = caroselSize - wrapperSize;
-		let caroselPosition = getCaroselPosition();
-		let caroselEndOffset= invisibleSize - buttonMargin;
-
-		if (caroselPosition <= buttonMargin) {
-			leftButton.addClass('hidden');
-			rightButton.removeClass('hidden')
-		}else if(caroselPosition < caroselEndOffset){
-			leftButton.removeClass ('hidden');
-			rightButton.removeClass('hidden');
-		}else if(caroselPosition >= caroselEndOffset){
-			leftButton.removeClass ('hidden');
-			rightButton.addClass('hidden');
-		}
-		});
-
-
-	rightButton.addEventListener('onclick', function(){
-		carosel.animate({scrollLeft:'-1200'}, scrollDuration);
-	});
-	leftButton.addEventListener('onclick', function(){
-		carosel.animate({scrollLeft:'+1200'}, scrollDuration);
-	});
 
 //GET POST CONTENT
 let postHeader = document.querySelector(".postHeader");

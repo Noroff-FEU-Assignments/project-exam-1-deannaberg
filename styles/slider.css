@@ -11,7 +11,6 @@
 	font-size: 1.2rem;
 	margin-bottom: 20px;
 }
-
 .headingDottedLine::before,
 .headingDottedLine::after {
 	content: "";
@@ -27,58 +26,53 @@
 .headingDottedLine h2 {
 	flex: 0 1 auto;
 }
-.postCarosel {
+.carouselWrap{
 	width: 100%;
-	height: 100%;
+	max-width: 1200px;
+	position: relative;
+}
+.carousel {
+	width: auto;
+	height: 300px;
 	margin: auto;
 	background-color: #fff;
 	padding: 20px 0px;
 	position: relative;
 	z-index: 4000;
-	overflow-x: hidden;
+	overflow-x: scroll;
+	overflow-y:hidden;
+	scroll-behavior:smooth;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
-.postCarosel::after,
-.postCarosel::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	z-index: 5000;
-	height: 100%;
-}
-.postCarosel::after {
-	border-right: solid 20px #fff;
-	right: 0;
-}
-.postCarosel::before {
-	border-left: solid 20px #fff;
-	left: 0;
-}
-.postCarosel a {
+.carousel::-webkit-scrollbar {
+	display: none;
+  }
+.carousel a {
 	margin: 0 20px 0 0;
 	text-decoration: none;
+	color: inherit;
 }
-.leftArrow,
-.rightArrow {
+.leftButton,
+.rightButton {
 	position: absolute;
 	top: 50%;
-	z-index: 8000;
+	z-index: 12000;
 	font-size: 1.5rem;
 	cursor: pointer;
 	margin: 15px;
 	color: #fff;
 	text-shadow: 1px 1px 8px var(--black);
 }
-.leftArrow {
+
+.leftButton {
 	left: 10px;
 }
-.rightArrow {
+.rightButton {
 	right: 10px;
 }
-#postWrapper {
+#carouselInner {
 	width: auto;
-	overflow-x: scroll;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
 	display: flex;
 	position: relative;
 	height: auto;
@@ -86,9 +80,7 @@
 	z-index: 4000;
 	padding-left: 20px;
 }
-#postWrapper::-webkit-scrollbar {
-		display: none;
-	  }
+
 
 .caroselItem {
 	min-width: 250px;
@@ -96,7 +88,7 @@
 	height: 210px;
 	margin: 0 20px 0 0;
 	position: relative;
-	z-index: 4000;
+	display: inline-block;
 }
 .caroselItem:hover {
 	z-index: 4500;
@@ -109,24 +101,23 @@
 	object-fit: cover;
 	background-color: var(--lightGreen);
 }
-.caroselContent {
-	background-color: rgba(255, 255, 255, 0.9);
-	padding: 10px 20px;
-	cursor: pointer;
-	text-align: left;
+.carouselText{
 	position: absolute;
-	left: 0;
 	bottom: 0;
+	background-color: rgba(255, 255, 255, .8);
 	width: 100%;
-	height: 30%;
+	height: 40%;
+	padding: 10px;
+
 }
-.caroselContent h3 {
-	padding: 0;
-	margin: 0 0 5px 0;
-	font-size: 0.6rem;
-	width: 100%;
+
+.carouselText h2{
+	font-size: 1.2rem;
+
 }
-.caroselContent h2 {
-	font-size: 1rem;
-	color: var(--black);
+.carouselText h3{
+	font-size: .8rem;
+	margin-bottom: .2rem;
+
 }
+

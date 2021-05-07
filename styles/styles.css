@@ -115,7 +115,7 @@ main {
 #topSection{
     grid-area: top;
     overflow:hidden;
-    height: 300px;
+    height: auto;
     padding-bottom: 40px;
     
 }
