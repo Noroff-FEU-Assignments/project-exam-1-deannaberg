@@ -33,6 +33,8 @@ body{
     width: 100%;
     background-color: var(--eggshell);
     overflow-y: visible;
+    overflow-x:hidden;
+    
 }
 
 #header {
@@ -98,7 +100,8 @@ main {
     "top"
     "lcolumn"
     "rcolumn";
-    position:relative;   
+    position:relative;
+    overflow-x:hidden;   
    
 }
 #footer{
@@ -136,9 +139,10 @@ main {
 /*FONT STYLES*/
 h1{
     font-style: italic;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 2rem;
     margin: 0;
+    letter-spacing: .005rem;
 }
 
 h2{
