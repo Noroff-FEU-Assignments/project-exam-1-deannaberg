@@ -8,7 +8,7 @@
     --box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.1);
     --box-shadow-dark: 1px 1px 20px 5px rgba(0, 0, 0, 0.3);
     --dotted-border: 4px dotted;
-    --active: 2px solid var(--red);
+    --active: 3px solid var(--darkGreen);
     --sans: futura-pt, sans-serif;
     --serif: eskorte-latin, serif;
 }
@@ -17,7 +17,6 @@ html{
 }
 *, *::before, *::after{
     box-sizing: border-box;
-
 }
 
 body{
@@ -101,22 +100,22 @@ main {
     "lcolumn"
     "rcolumn";
     position:relative;
-    overflow-x:hidden;   
-   
 }
 #footer{
     grid-area: footer;
     height: 150px;
-    background-color: #fff;
+    background-color:var(--lightGreen);
     text-align: center;
     padding: 20px 0 10px 0;
+    display: relative;
+    bottom: 0;
     
 }
 #topSection{
     grid-area: top;
-    overflow:hidden;
     height: auto;
     padding-bottom: 40px;
+    overflow: hidden;
     
 }
 
@@ -238,6 +237,7 @@ nav a{
     font-family: var(--sans);
     font-style: normal;
     font-weight: 400;
+    transition: color ease 300ms;
     text-transform: uppercase;
     color: var(--eggshell);
     text-decoration: none;
@@ -245,12 +245,10 @@ nav a{
     letter-spacing: .1rem;
     cursor: pointer;
     margin-left: 20px;
-    
-   
 }
 
-nav a:hover{
-    font-weight: 600;
+nav a:hover, nav a:focus{
+    color: var(--darkGreen);
 }
 #navAbout{
     display: flex;
@@ -265,7 +263,8 @@ nav a:hover{
     cursor: pointer; 
 }
 .btn-top:hover{
-    font-size: 1.6rem;
+    transform: scale(1.1);
+	transition: all ease 300ms;
 }
 
 #menuClose #searchClose{
