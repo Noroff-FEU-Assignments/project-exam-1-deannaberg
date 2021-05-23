@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>The Arctic Berg - Contact</title>
+		<meta name="description" content="Use this form to contact The Arctic Berg."/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--Style Sheets-->
+		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/contact.css" rel="stylesheet" />
+
+
+		<!--Fonts-->
+		<link rel="preload" href="https://use.typekit.net/ihl1awq.css">
+
+		<!--Font Awesome Script-->
+		<script src="https://kit.fontawesome.com/a8fae1eb2c.js"crossorigin="anonymous"></script>
+			
+	</head>
+	<body>
+		<header id="header">
+			<div id="menu-background"></div>
+			<div id="header-wrap">
+			<a id="logo" href="index.html">
+				<img src="svg/logo.svg" alt="the arctic berg logo" />
+				<h1>The Arctic Berg</h1>
+			</a>
+			<div id="dropMenu">
+				<button class="btn-top" aria-label="drop menu"><i class="fas fa-bars"></i></button>
+				</div>
+				<nav id="nav" class="menuHide">
+					<div class="menu-close">
+						<button class="closeButton btn-top btn-close" aria-label="close" ><i class="fas fa-times"></i></button>
+					</div>
+					<div id="navContainer"></div>
+					<div id="navAbout">
+						<a href="about.html">about</a>
+						<a href="contact.html">contact</a>
+					</div>
+				</nav>
+			
+			<div id="searchDrop" tabindex="0">
+				<button class="btn-top" aria-label="search dropdown"><i class="fas fa-search"></i></button>
+			</div>
+			<div id="searchBox" class="searchHide">
+				<div class="search-close">
+					<button class="searchButton btn-top btn-close" aria-label="close"><i class="fas fa-times"></i></button>
+				</div>
+				<form id="searchInput">
+					<input class="search" type="search" name="search" placeholder="search my blog"/>
+					<input class="searchInput" type="submit" value="go"/>
+				</form>
+			</div>
+		
+		</div>
+			</header>
+    <main>
+		<div id="contactWrap">
+		<h2>contact</h2>
+        <form class="contactForm" action="" method="get">
+            <label class="contactLabel"><span class="label">Name</span><span id="nameError" class=" minInput">min 5 characters</span><br/>
+                <input id="name"class="contactInput" type="text" name="Name"/></label><br/>
+            <label class="contactLabel"><span class="label">Email</span><span id="emailError" class="minInput ">must be a valid email address</span><br/>
+                <input id="email" class="contactInput " type="email" name="email"/></label><br/>
+            <label class="contactLabel"><span class="label">Subject</span><span id="subjectError"class="minInput">min 16 characters</span><br/>
+                <input id="subject" class="contactInput " type="subject" name="subject"/></label><br/>
+            <label class="contactLabel"><span class="label">Message</span><span id="messageError"class="minInput">min 26 characters</span><br/>
+                <textarea id="message"class="contactInput messageInput" name="message" placeholder="Your message here..."></textarea>
+            </label>
+			<p>All fields are required</p>
+            <input id="submit" class="submitButton" type="submit" name="submit" value="send" />
+        </form>
+	</div>
+    </main>
+    <footer id="footer">
+		<p>&copy Deanna Berg 2021, all rights reserved.</p>
+	</footer>
+    <script src="js/header.js"></script>
+    <script src="js/contact.js"></script>
+  
+</body>
+</html>

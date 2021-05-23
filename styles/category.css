@@ -1,0 +1,58 @@
+.cardWrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    ;
+}
+.postCard{
+    width: 260px;
+    height: 300px;
+    background: #fff;
+    padding: 10px;
+    margin: 0 10px 10px 0 ;
+}
+
+.postCard img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    
+}
+.postCard h2{
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+.postCard a{
+    color: inherit;
+
+}
+
+.date{
+    font-family: var(--sans);
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--darkGreen);
+}
+#loadMore{
+    display: none;
+    background-color: var(--darkGreen);
+    outline: none;
+    border: 0 none;
+    color: var(--eggshell);
+    font-style: var(--sans);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+}
+@media screen and (min-width: 600px){
+    .cardWrap{
+        justify-content:flex-start;
+    }
+}

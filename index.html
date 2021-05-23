@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>The Arctic Berg</title>
+		<meta name="description" content="Welcome to The Arctic Berg -- a lifestyle blog about an American immigrant's life in
+        Norway."/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--Style Sheets-->
+		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/post.css" rel="stylesheet" />
+		<link href="styles/slider.css" rel="stylesheet" />
+
+		<!--Fonts-->
+		<link rel="stylesheet" href="https://use.typekit.net/ihl1awq.css">
+
+		<!--Font Awesome Script-->
+		<script
+			src="https://kit.fontawesome.com/a8fae1eb2c.js"crossorigin="anonymous"></script>
+		
+	</head>
+	<body>
+		<header id="header">
+		<div id="menu-background"></div>
+		<div id="header-wrap">
+        <div id="small-nav"></div>
+        <div id="logo">
+		<a href="index.html">
+        <img src="svg/logo.svg" alt="the arctic berg logo" />
+        <h1>The Arctic Berg</h1>
+		</a>
+        </div>
+		<div id="dropMenu">
+			<button class="btn-top" aria-label="drop menu"><i class="fas fa-bars"></i></button>
+			</div>
+			<nav id="nav" class="menuHide">
+				<div class="menu-close">
+					<button class="closeButton btn-top btn-close" aria-label="close" ><i class="fas fa-times"></i></button>
+				</div>
+				<div id="navContainer"></div>
+				<div id="navAbout">
+					<a href="about.html">about</a>
+					<a href="contact.html">contact</a>
+				</div>
+			</nav>
+		
+		<div id="searchDrop" tabindex="0">
+			<button class="btn-top" aria-label="search dropdown"><i class="fas fa-search"></i></button>
+		</div>
+		<div id="searchBox" class="searchHide">
+			<div class="search-close">
+				<button class="searchButton btn-top btn-close" aria-label="close"><i class="fas fa-times"></i></button>
+			</div>
+			<form id="searchInput">
+				<input class="search" type="search" name="search" placeholder="search my blog"/>
+				<input class="searchInput" type="submit" value="go"/>
+			</form>
+		</div>
+	
+	</div>
+		</header>
+
+		<!--Main Section-->
+		<main>
+			<section id="topSection">
+				<h2 class="headingDottedLine">popular posts</h2>
+				<div class="carouselWrap">
+					<div id="carousel" class="carousel">
+						<div id="carouselInner"></div>
+					</div>
+					<button type="button" class="leftButton" aria-label="left button"><i class="fas fa-chevron-left"></i></button>
+					<button type="button" class="rightButton" aria-label="right button"><i class="fas fa-chevron-right"></i></button>
+				</div>
+			</section>
+			<section id="leftColumn">
+				<h2 class="headingDottedLine">recent post</h2>
+				<article id="post" class="post">
+					<header class="postHeader"></header>
+					<section class="postText"></section>
+					<div id="modalBackground" class="hide">
+						<button id="modalButton" aria-label="close">X</button>
+						<img id="modalImage" src="" alt="" />
+					</div>
+					<footer class="postFooter">
+						<section class="shareComments">
+							<span>
+								<i class="fas fa-envelope"></i>
+								<i class="fab fa-facebook-messenger"></i>
+								<i class="fab fa-facebook"></i>
+								<i class="fab fa-twitter"></i>
+								<i class="fab fa-pinterest"></i>
+							</span>
+							<span>comments: 3</span>
+						</section>
+					</footer>  
+				</article>
+			</section>
+			<section id="rightColumn">
+				<div class="sideBox whiteBox">
+					<img class="aboutImage" src="images/profile_pic.jpg" alt="profile image" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<div class="aboutLinks"><a href="about.html" >about</a><img class="flower" src="svg/flower.svg"/ alt="decorative flower"><a href="contact.html" >contact</a></div>
+				</div>
+				<div id="subscribe" class="sideBox">
+					<h4>Never Miss a Post</h4>
+					<p>Join my mailing list and get</br>posts directly in your inbox!</p>
+					<form class="sideSubscribe">
+						<label for="email" class="hide">Your Email:  </label>
+							<input class="email" type="text" name="email" value="your email"/>
+					  
+						<button class="submitButton" type="submit">subscribe</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<p>&copy; Deanna Berg 2021, all rights reserved.</p>
+		</footer>
+		<script src="js/header.js"></script>
+		<script src="js/carousel.js"></script>
+		<script src="js/modal.js"></script>
+		<script src="js/post.js"></script>
+	</body>
+</html>

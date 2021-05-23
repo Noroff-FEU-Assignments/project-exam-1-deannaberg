@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>The Arctic Berg</title>
+		<meta name="description" content="brown through my posts by categories on this page"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--Style Sheets-->
+		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/category.css" rel="stylesheet" />
+
+		<!--Fonts-->
+		<link rel="stylesheet" href="https://use.typekit.net/ihl1awq.css">
+
+		<!--Font Awesome Script-->
+		<script
+			src="https://kit.fontawesome.com/a8fae1eb2c.js"crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header id="header">
+		<div id="menu-background"></div>
+		<div id="header-wrap">
+        <div id="small-nav"></div>
+        <div id="logo">
+		<a href="index.html">
+        <img src="svg/logo.svg" alt="the arctic berg logo" />
+        <h1>The Arctic Berg</h1>
+		</a>
+        </div>
+			<div id="dropMenu">
+			<button class="btn-top" aria-label="drop menu"><i class="fas fa-bars"></i></button>
+			</div>
+			<nav id="nav" class="menuHide">
+				<div class="menu-close">
+					<button class="closeButton btn-top btn-close" aria-label="close" ><i class="fas fa-times"></i></button>
+				</div>
+				<div id="navContainer"></div>
+				<div id="navAbout">
+					<a href="about.html">about</a>
+					<a href="contact.html">contact</a>
+				</div>
+			</nav>
+		
+		<div id="searchDrop" tabindex="0">
+			<button class="btn-top" aria-label="search dropdown"><i class="fas fa-search"></i></button>
+		</div>
+		<div id="searchBox" class="searchHide">
+			<div class="search-close">
+				<button class="searchButton btn-top btn-close" aria-label="close"><i class="fas fa-times"></i></button>
+			</div>
+			<form id="searchInput">
+				<input class="search" type="search" name="search" placeholder="search my blog"/>
+				<input class="searchInput" type="submit" value="go"/>
+			</form>
+		</div>
+	
+	</div>
+		</header>
+
+		<!--Main Section-->
+		<main>
+			<section id="leftColumn">
+				<div class="cardWrap"></div>
+				<button id="loadMore" aria-label="Load More">Load More</button>
+			</section>
+			<section id="rightColumn">
+				<div class="sideBox whiteBox">
+					<img class="aboutImage" src="images/profile_pic.jpg" alt="profile image" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<div class="aboutLinks"><a href="about.html" >about</a><img class="flower" src="svg/flower.svg"/><a href="contact.html" >contact</a></div>
+				</div>
+				<div id="subscribe" class="sideBox backgroundShape">
+					<h4>Never Miss a Post</h4>
+					<p>Join my mailing list and get</br>posts directly in your inbox!</p>
+					<form class="sideSubscribe">
+						<input class="email" type="text" name="email" value="your email"/>
+						<button class="submitButton" type="submit" name="subscribe" aria-label="subscribe">subscribe</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<p>&copy Deanna Berg 2021, all rights reserved.</p>
+		</footer>
+		<script src="js/header.js"></script>
+		<script src="js/category.js"></script>
+		
+	</body>
+</html>

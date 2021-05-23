@@ -1,0 +1,100 @@
+/*CAROSEL*/
+
+.carouselWrap{
+	width: 100%;
+	max-width: 1200px;
+	position: relative;
+	background-color: #fff;
+	padding:20px;
+}
+.carousel {
+	width: auto;
+	height: auto;
+	margin: auto;
+	position: relative;
+	z-index: 50;
+	overflow-x: scroll;
+	overflow-y:hidden;
+	scroll-behavior:smooth;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+	display: none;
+  }
+.carousel a {
+	margin: 0 20px 0 0;
+	text-decoration: none;
+	color: inherit;
+}
+.show,
+.rightButton {
+	position: absolute;
+	top: 40%;
+	z-index: 60;
+	font-size: 2rem;
+	cursor: pointer;
+	margin: 2px;
+	color: #fff;
+	text-shadow: 1px 1px 8px var(--black);
+	border: 0 none;
+	background: none;
+	height: 48px;
+	width: 48px;
+}
+
+.show {
+	left: 10px;
+}
+.rightButton {
+	right: 10px;
+}
+#carouselInner {
+	width: auto;
+	display: flex;
+	position: relative;
+	height: auto;
+	background-color: none;
+	
+}
+.caroselItem {
+	min-width: 250px;
+	max-width: 250px;
+	height: 210px;
+	margin: 0 10px 0 0;
+	position: relative;
+	display: inline-block;
+}
+.caroselItem:hover, .caroselItem:focus{
+	transform: scale(.96);
+	transition: all ease 800ms;
+  
+}
+.caroselImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-color: var(--lightGreen);
+}
+.carouselText{
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .6);
+	width: 100%;
+	height: 40%;
+	padding: 10px;
+
+}
+
+.carouselText h2{
+	font-size: 1.2rem;
+	color: var(--eggshell);
+
+}
+.carouselText h3{
+	font-size: .8rem;
+	margin-bottom: .2rem;
+	color: var(--lightGreen);
+
+}
+

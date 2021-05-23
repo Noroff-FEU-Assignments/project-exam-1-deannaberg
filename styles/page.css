@@ -1,0 +1,17 @@
+main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+    "lcolumn"
+    "rcolumn";
+}
+
+@media screen and (min-width: 900px){
+    main{
+        grid-template-rows: auto;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+        "lcolumn rcolumn";
+    }
+  
+}

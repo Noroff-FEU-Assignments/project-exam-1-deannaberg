@@ -1,0 +1,97 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+#contactWrap{
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    align-self: flex-start;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+}
+#contactWrap h2{
+    margin: 0 0 20px 10px;
+    text-transform: uppercase;
+    color: var(--darkGreen);
+    font-family: var(--sans);
+    font-weight: 600;
+    
+}
+.contactForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans);
+    letter-spacing: .05rem;
+}
+.contactLabel{
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom:20px;
+}
+.minInput{
+    text-transform: none;
+    margin-left: .2rem;
+    font-size: .8rem;                   
+}
+.contactInput{
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    padding-left:20px;
+    font-size: 1rem;
+    font-family: var(--serif);
+}
+.messageInput{
+    max-width: 100%;
+    padding: 10px;
+    font-family: var(--serif);
+    height: 200px;
+    overflow: auto;
+    resize:none;
+    margin: 10px auto 0 auto;
+}
+.label{
+    margin-left: 10px;
+}
+.submitButton{
+    width: 100px;
+    padding: 10px;
+    background-color: var(--eggshell);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--darkGreen);
+    font-size:1rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor:pointer;
+    border: 1px solid var(--darkGreen);
+    align-self: flex-end;
+}
+.submitButton:hover{
+    background-color: var(--darkGreen);
+   
+    color: var(--eggshell);
+}
+#emailError{
+    display: none;
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: .6rem;
+    font-weight: 600;
+}
+
+.contactForm p{
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin: 0;
+}
+ #nameError, #subjectError, #messageError {
+    color: var(--darkGreen);
+    text-transform: uppercase;
+    font-size: .6rem;
+    font-weight: 600;
+}
